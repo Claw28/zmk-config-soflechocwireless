@@ -106,13 +106,13 @@ to_layer_with_color: to_layer_with_color {
 // |  `    |  1  |  2  |  3   |  4   |  5   |                         |  6   |  7    |  8    |  9   |   0   |       |
 // |  ESC  |  Q  |  W  |  E   |  R   |  T   |                         |  Y   |  U    |  I    |  O   |   P   | BKSPC |
 // |  TAB  |  A  |  S  |  D   |  F   |  G   |                         |  H   |  J    |  K    |  L   |   ;   |   '   |
-// | SHIFT |  Z  |  X  |  C   |  V   |  B   |  play/pause  |        | ExtPw |  N   |  M    |  ,    |  .   |   /   | SHIFT |
+// | SHIFT |  Z  |  X  |  C   |  V   |  B   |  play/pause  |        | RGB |  N   |  M    |  ,    |  .   |   /   | SHIFT |
 //               | GUI | ALT  | CTRL | LOWER|  ENTER |        | SPACE | RAISE| CTRL  | ALT   | GUI  |
             bindings = <
 &kp GRAVE &kp N1 &kp N2   &kp N3   &kp N4    &kp N5                              &kp N6 &kp N7    &kp N8    &kp N9   &kp N0   &none
 &kp ESC   &kp Q  &kp W    &kp E    &kp R     &kp T                               &kp Y  &kp U     &kp I     &kp O    &kp P    &kp BSPC
 &kp TAB   &kp A  &kp S    &kp D    &kp F     &kp G                               &kp H  &kp J     &kp K     &kp L    &kp SEMI &kp SQT
-&kp LSHFT &kp Z  &kp X    &kp C    &kp V     &kp B  &kp C_PLAY_PAUSE &ext_power EP_TOG &kp N  &kp M     &kp COMMA &kp DOT  &kp FSLH &kp RSHFT
+&kp LSHFT &kp Z  &kp X    &kp C    &kp V     &kp B  &kp C_PLAY_PAUSE &rgb_ug RGB_TOG  &kp N  &kp M     &kp COMMA &kp DOT  &kp FSLH &kp RSHFT
                  &kp LGUI &kp LALT &kp LCTRL &to_layer_with_color 1 RGB_COLOR_HSB(240, 100, 50)  &kp RET    &kp SPACE         &to_layer_with_color 2 RGB_COLOR_HSB(43, 100, 50)  &kp RCTRL &kp RALT  &kp RGUI
             >;
 
@@ -143,13 +143,13 @@ to_layer_with_color: to_layer_with_color {
 // |BTCLR| BT1  | BT2  |  BT3  |  BT4  |  BT5 |                 |      |      |       |      |       |       |
 // |     | INS  | PSCR | GUI   |       |      |                 | PGUP |      |   ^   |      |       |       |
 // |     | ALT  | CTRL | SHIFT |       | CAPS |                 | PGDN |   <- |   v   |  ->  |  DEL  | BKSPC |
-// |     | UNDO | CUT  | COPY  | PASTE |      |      |   | RGB  |      |      |       |      |       |       |
+// |     | UNDO | CUT  | COPY  | PASTE |      |      |   | EXT_PWR  |      |      |       |      |       |       |
 //              |      |       |       |      |      |   |      |      |      |       |      |
             bindings = <
 &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4                      &trans    &trans    &trans   &trans    &trans  &trans
 &trans     &kp INS      &kp PSCRN    &kp K_CMENU  &trans       &trans                            &kp PG_UP &trans    &kp UP   &trans    &kp N0  &trans
 &trans     &kp LALT     &kp LCTRL    &kp LSHFT    &trans       &kp CLCK                          &kp PG_DN &kp LEFT  &kp DOWN &kp RIGHT &kp DEL &kp BSPC
-&trans     &kp K_UNDO   &kp K_CUT    &kp K_COPY   &kp K_PASTE  &trans  &trans   &rgb_ug RGB_TOG  &trans    &trans    &trans   &trans    &trans  &trans
+&trans     &kp K_UNDO   &kp K_CUT    &kp K_COPY   &kp K_PASTE  &trans  &trans   &ext_power EP_TOG  &trans    &trans    &trans   &trans    &trans  &trans
                         &trans       &trans       &trans       &to_layer_with_color 0 RGB_COLOR_HSB(309, 100, 50)  &trans   &trans           &trans    &trans    &trans   &trans
             >;
 
